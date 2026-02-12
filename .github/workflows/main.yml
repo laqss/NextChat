@@ -15,9 +15,9 @@ jobs:
       - name: Checkout Fork
         uses: actions/checkout@v4
         with:
-          # 使用 Personal Access Token (PAT) 以触发后续的 Cloudflare Pages 构建
+          # 使用 Personal Access Token (secrets_PAT) 以触发后续的 Cloudflare Pages 构建
           # GITHUB_TOKEN 无法触发下游的 Actions
-          token: ${{ secrets.PAT }} 
+          token: ${{ secrets.secrets_PAT }} 
           # 获取所有历史记录，以便进行合并
           fetch-depth: 0
 
